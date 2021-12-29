@@ -20,7 +20,8 @@ function ProductView({ products }) {
                         <ProductListItem
                             key={item.id}
                             product={item}
-                            onClick={() => setSelectedProduct(item)}
+                            onClick={() => {setSelectedProduct(item) }}
+                            isSelected={ selectedProduct && (item.id === selectedProduct.id) }
                             />
                             )}
                 </div>
